@@ -1,3 +1,24 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
+export default function Game() {
+  const mountRef = useRef(null);
+
+  useEffect(() => {
+    console.log("Game mounted!");
+  }, []);
+
+  return (
+    <div
+      ref={mountRef}
+      style={{ width: "100vw", height: "100vh", overflow: "hidden" }}
+    >
+      Game Page
+    </div>
+  );
+}
+
 import { useEffect, useRef } from "react";
 
 export default function Game() {
