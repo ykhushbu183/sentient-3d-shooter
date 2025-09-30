@@ -1,4 +1,3 @@
-cat > pages/game.js <<'EOF'
 import { useEffect, useRef } from "react";
 
 export default function Game() {
