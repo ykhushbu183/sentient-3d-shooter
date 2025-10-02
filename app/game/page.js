@@ -31,7 +31,7 @@ export default function Game() {
     mountRef.current.appendChild(renderer.domElement);
 
     // Shooter (Dog Logo)
-    const dogTexture = loader.load("/dog.png");
+    const dogTexture = loader.load("./public/sentient.png");
     const shooterMaterial = new THREE.SpriteMaterial({ map: dogTexture });
     const shooter = new THREE.Sprite(shooterMaterial);
     shooter.scale.set(1, 1, 1);
