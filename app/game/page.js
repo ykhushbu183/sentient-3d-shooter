@@ -15,7 +15,7 @@ export default function Game() {
 
     // Background with Sentient text
     const loader = new THREE.TextureLoader();
-    const bgTexture = loader.load("/sentient-bg.png"); // banalo ek image jisme Sentient likha ho
+    const bgTexture = loader.load("public/sentient-bg.png"); // banalo ek image jisme Sentient likha ho
     scene.background = bgTexture;
 
     const camera = new THREE.PerspectiveCamera(
@@ -31,7 +31,7 @@ export default function Game() {
     mountRef.current.appendChild(renderer.domElement);
 
     // Shooter (Dog Logo)
-    const dogTexture = loader.load("./public/sentient.png");
+    const dogTexture = loader.load("/public/sentient.png");
     const shooterMaterial = new THREE.SpriteMaterial({ map: dogTexture });
     const shooter = new THREE.Sprite(shooterMaterial);
     shooter.scale.set(1, 1, 1);
@@ -57,7 +57,7 @@ export default function Game() {
     window.addEventListener("keydown", onKeyDown);
 
     // Enemy balls with Sentient logo
-    const sentientTexture = loader.load("/sentient-logo.png");
+    const sentientTexture = loader.load("public/sentient-logo.png");
     const enemyMaterial = new THREE.SpriteMaterial({ map: sentientTexture });
 
     const enemies = [];
